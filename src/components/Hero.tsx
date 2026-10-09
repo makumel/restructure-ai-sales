@@ -26,8 +26,8 @@ export const Hero: React.FC<HeroProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex flex-wrap items-center gap-3 mb-6">
           <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded border border-line dark:border-line-dark bg-white/80 dark:bg-neutral-900/80 text-xs font-mono uppercase tracking-wider text-ink-soft dark:text-ink-light">
-            <span className="w-2 h-2 rounded-full bg-reese-green animate-ping inline-block"></span>
-            <span>ReStructure AI · Blueprint V4</span>
+            <span className="w-2 h-2 rounded-full bg-sovereign-green animate-ping inline-block"></span>
+            <span>Sovereign Sales OS · Blueprint V4</span>
           </div>
           <span className="text-xs font-mono text-ink-mute tracking-widest uppercase">
             Sovereign Mini Computer Server
@@ -39,7 +39,7 @@ export const Hero: React.FC<HeroProps> = ({
         </h1>
 
         <p className="text-lg sm:text-xl text-ink-soft dark:text-ink-light/80 max-w-2xl leading-relaxed mb-8">
-          Private, sovereign, on premise... sitting on top of your desk. Reese coordinates seven specialized agents to manage your pipeline 24/7. Research, cold outreach, inbound qualification, logistics, and RevOps — while keeping final sign-off authority in your hands.
+          Private, sovereign, on premise... sitting on top of your desk. Sovereign Sales coordinates seven specialized agents to manage your pipeline 24/7. Research, cold outreach, inbound qualification, logistics, and RevOps — while keeping final sign-off authority in your hands.
         </p>
 
         <div className="flex flex-wrap items-center gap-4 mb-14">
@@ -56,7 +56,7 @@ export const Hero: React.FC<HeroProps> = ({
             onClick={onScrollToSimulator}
             className="inline-flex items-center gap-2 px-5 py-3 rounded text-sm font-medium border border-line dark:border-line-dark bg-white dark:bg-neutral-900 text-ink dark:text-ink-light hover:bg-neutral-100 dark:hover:bg-neutral-800 active:scale-[0.98] transition-all"
           >
-            <Zap className="w-4 h-4 text-reese-green" />
+            <Zap className="w-4 h-4 text-sovereign-green" />
             Launch Live Pipeline Simulator
           </button>
 
@@ -82,12 +82,12 @@ export const Hero: React.FC<HeroProps> = ({
 
           <div className="p-3 bg-white/50 dark:bg-neutral-900/50 rounded border border-line-soft dark:border-line-dark">
             <div className="text-xs font-mono text-ink-mute uppercase tracking-widest mb-1 flex items-center gap-1.5">
-              <Shield className="w-3 h-3 text-reese-green" />
+              <Shield className="w-3 h-3 text-sovereign-green" />
               Human Governance
             </div>
             <div className="text-xl font-semibold tracking-tight text-ink dark:text-white flex items-center gap-2">
               <span>You Own It</span>
-              <span className="w-2 h-2 rounded-full bg-reese-green"></span>
+              <span className="w-2 h-2 rounded-full bg-sovereign-green"></span>
             </div>
             <p className="text-xs text-ink-mute mt-1">Agent 06 closer co-pilot requires human sign-off</p>
           </div>
@@ -105,7 +105,7 @@ export const Hero: React.FC<HeroProps> = ({
 
           <div className="p-3 bg-white/50 dark:bg-neutral-900/50 rounded border border-line-soft dark:border-line-dark">
             <div className="text-xs font-mono text-ink-mute uppercase tracking-widest mb-1 flex items-center gap-1.5">
-              <Zap className="w-3 h-3 text-reese-green" />
+              <Zap className="w-3 h-3 text-sovereign-green" />
               Real-Time Protocol
             </div>
             <div className="text-xl font-semibold tracking-tight text-ink dark:text-white">

@@ -25,7 +25,7 @@ export default {
           soft: '#e5e5df',
           dark: '#2c2c29',
         },
-        reese: {
+        sovereign: {
           green: '#34c759',
           'green-dk': '#1f8f3d',
           'green-lt': '#eaf9ed',

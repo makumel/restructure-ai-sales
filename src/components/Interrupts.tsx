@@ -45,7 +45,7 @@ export const Interrupts: React.FC = () => {
 
               <div className="mt-5 pt-3 border-t border-line-soft dark:border-line-dark font-mono text-[11px] text-ink-mute flex items-center justify-between">
                 <span>{item.tools}</span>
-                <CheckCircle2 className="w-3.5 h-3.5 text-reese-green" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-sovereign-green" />
               </div>
             </div>
           ))}

@@ -30,8 +30,8 @@ export const Scoreboard: React.FC = () => {
               The Scoreboard So Far, Building in Public.
             </h2>
           </div>
-          <div className="flex items-center gap-2 text-xs font-mono text-reese-green font-medium">
-            <span className="w-2 h-2 rounded-full bg-reese-green animate-pulse"></span>
+          <div className="flex items-center gap-2 text-xs font-mono text-sovereign-green font-medium">
+            <span className="w-2 h-2 rounded-full bg-sovereign-green animate-pulse"></span>
             ALL METRICS COLLECTED FROM LOCAL AUDIT LOGS
           </div>
         </div>
