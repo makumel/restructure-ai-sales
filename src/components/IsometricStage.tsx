@@ -159,12 +159,12 @@ export const IsometricStage: React.FC = () => {
               }`}
               title={isAutoTracing ? 'Pause Auto-Trace' : 'Start Auto-Trace through layers'}
             >
-              {isAutoTracing ? (\
+              {isAutoTracing ? (
                 <>
                   <Pause className="w-3.5 h-3.5" />
                   <span className="font-semibold">Tracing Active</span>
                 </>
-              ) : (\
+              ) : (
                 <>
                   <Play className="w-3.5 h-3.5" />
                   <span>Auto-Trace Flow</span>
@@ -397,7 +397,7 @@ export const IsometricStage: React.FC = () => {
                 {/* Tab Navigation */}
                 <div className="mt-5 border-b border-line-soft dark:border-line-dark flex gap-1 text-xs font-mono">
                   <button
-                    onClick={() => setActiveTab('specs')}
+                    onClick={() => setActiveTab('specs')}\
                     className={`pb-2 px-2.5 transition-colors border-b-2 -mb-px flex items-center gap-1.5 ${
                       activeTab === 'specs'
                         ? 'border-ink text-ink dark:border-white dark:text-white font-medium'
@@ -445,7 +445,7 @@ export const IsometricStage: React.FC = () => {
                 {/* Tab 1: Specs */}
                 {activeTab === 'specs' && (
                   <div className="mt-4 space-y-2 text-xs">
-                    {activeAgent.specs.map(([label, val]) => (\
+                    {activeAgent.specs.map(([label, val]) => (
                       <div
                         key={label}
                         className="flex justify-between items-center py-1.5 px-2.5 rounded bg-neutral-50 dark:bg-neutral-800/50 border border-line-soft dark:border-line-dark"
@@ -466,7 +466,7 @@ export const IsometricStage: React.FC = () => {
                       Registered MCP Tools & APIs for this execution layer:
                     </div>
                     <div className="flex flex-wrap gap-1.5 pt-1">
-                      {activeAgent.tools.map((tool) => (\
+                      {activeAgent.tools.map((tool) => (
                         <span
                           key={tool}
                           className="text-xs font-mono px-2.5 py-1 rounded border border-line dark:border-line-dark bg-neutral-50 dark:bg-neutral-800 text-ink dark:text-ink-light flex items-center gap-1.5"
@@ -486,7 +486,7 @@ export const IsometricStage: React.FC = () => {
                       Sovereign on-disk Markdown files stored on NVMe:
                     </div>
                     <div className="space-y-1.5 pt-1">
-                      {activeAgent.files.map((file) => (\
+                      {activeAgent.files.map((file) => (
                         <div
                           key={file}
                           className="flex items-center justify-between text-xs font-mono p-2 rounded bg-neutral-50 dark:bg-neutral-800 border border-line-soft dark:border-line-dark"
