@@ -141,11 +141,11 @@ export const IsometricStage: React.FC = () => {
             </div>
           </div>
 
-          <div className="relative z-10 my-auto flex items-center justify-center py-10">
-            <div className="relative w-full max-w-4xl h-[480px] flex items-center justify-center">
+          <div className="relative z-10 my-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-6">
+            <div className="lg:col-span-7 xl:col-span-8 flex items-center justify-center w-full min-h-[440px] lg:min-h-[520px]">
               <svg 
                 viewBox="0 0 900 600" 
-                className="w-full h-full max-h-[500px] overflow-visible drop-shadow-md select-none"
+                className="w-full h-full max-h-[520px] overflow-visible drop-shadow-md select-none"
               >
                 <defs>
                   <linearGradient id="lidGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -307,7 +307,7 @@ export const IsometricStage: React.FC = () => {
                       {isSelected && (
                         <g className="pointer-events-none">
                           <polyline 
-                            points="150,0 210,0 260,-20" 
+                            points="150,0 210,0 250,-10" 
                             fill="none" 
                             stroke={isHumanCore ? '#34c759' : '#161616'} 
                             strokeWidth="1.5" 
@@ -315,16 +315,18 @@ export const IsometricStage: React.FC = () => {
                             className="dark:stroke-neutral-400"
                           />
                           <circle cx="150" cy="0" r="3" fill={isHumanCore ? '#34c759' : '#161616'} />
-                          <circle cx="260" cy="-20" r="3" fill={isHumanCore ? '#34c759' : '#161616'} />
+                          <circle cx="250" cy="-10" r="3" fill={isHumanCore ? '#34c759' : '#161616'} />
                         </g>
                       )}
                     </g>
                   );
                 })}
               </svg>
+            </div>
 
+            <div className="lg:col-span-5 xl:col-span-4 w-full">
               <div 
-                className="absolute right-2 sm:right-4 lg:right-6 bottom-2 lg:bottom-auto lg:top-1/2 lg:-translate-y-1/2 w-72 sm:w-80 max-w-[calc(100vw-2.5rem)] bg-white/95 dark:bg-neutral-900/95 backdrop-blur-md border border-line dark:border-line-dark rounded-xl p-4 sm:p-5 shadow-float pointer-events-auto transition-all z-20"
+                className="w-full bg-white dark:bg-neutral-900 border border-line dark:border-line-dark rounded-xl p-5 sm:p-6 shadow-sm transition-all"
                 aria-live="polite"
                 aria-atomic="true"
               >
@@ -341,11 +343,14 @@ export const IsometricStage: React.FC = () => {
                       {activeAgent.controlType}
                     </span>
                   </div>
-                  <span className="w-2 h-2 rounded-full bg-reese-green animate-pulse"></span>
+                  <div className="flex items-center gap-1.5 text-xs font-mono text-reese-green">
+                    <span className="w-2 h-2 rounded-full bg-reese-green animate-pulse"></span>
+                    <span>ACTIVE INSPECTION</span>
+                  </div>
                 </div>
 
-                <div className="mt-3">
-                  <h3 className="text-base font-semibold text-ink dark:text-white tracking-tight">
+                <div className="mt-3.5">
+                  <h3 className="text-lg font-semibold text-ink dark:text-white tracking-tight">
                     {activeAgent.title}
                   </h3>
                   <p className="text-xs text-ink-mute font-mono mt-0.5">
@@ -357,7 +362,7 @@ export const IsometricStage: React.FC = () => {
                   {activeAgent.longDescription}
                 </p>
 
-                <div className="mt-4 pt-3 border-t border-line-soft dark:border-line-dark">
+                <div className="mt-4 pt-3.5 border-t border-line-soft dark:border-line-dark">
                   <div className="text-[10px] font-mono uppercase tracking-wider text-ink-mute mb-2 flex items-center gap-1.5">
                     <Wrench className="w-3 h-3 text-ink-mute" />
                     Connected Tools & MCP
@@ -366,7 +371,7 @@ export const IsometricStage: React.FC = () => {
                     {activeAgent.tools.map((tool) => (
                       <span 
                         key={tool}
-                        className="text-[11px] font-mono px-2 py-0.5 rounded border border-line-soft dark:border-line-dark bg-canvas-subtle dark:bg-neutral-800 text-ink dark:text-ink-light"
+                        className="text-[11px] font-mono px-2 py-0.5 rounded border border-line-soft dark:border-line-dark bg-neutral-50 dark:bg-neutral-800 text-ink dark:text-ink-light"
                       >
                         {tool}
                       </span>
@@ -374,7 +379,7 @@ export const IsometricStage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="mt-3.5 pt-3 border-t border-line-soft dark:border-line-dark">
+                <div className="mt-3.5 pt-3.5 border-t border-line-soft dark:border-line-dark">
                   <div className="text-[10px] font-mono uppercase tracking-wider text-ink-mute mb-2 flex items-center gap-1.5">
                     <FileText className="w-3 h-3 text-ink-mute" />
                     Local Memory Files
@@ -388,8 +393,8 @@ export const IsometricStage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="mt-3.5 pt-3 border-t border-line-soft dark:border-line-dark text-[11px]">
-                  {activeAgent.specs.slice(0, 2).map(([label, val]) => (
+                <div className="mt-3.5 pt-3.5 border-t border-line-soft dark:border-line-dark text-[11px]">
+                  {activeAgent.specs.slice(0, 3).map(([label, val]) => (
                     <div key={label} className="flex justify-between py-0.5">
                       <span className="text-ink-mute">{label}:</span>
                       <span className="font-mono text-ink dark:text-ink-light font-medium">{val}</span>
@@ -422,7 +427,6 @@ export const IsometricStage: React.FC = () => {
               <span className="text-reese-green font-medium">99.4% VERIFIED PIPELINE</span>
             </div>
           </div>
-
         </div>
       </div>
     </section>
