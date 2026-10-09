@@ -30,17 +30,17 @@ export const Header: React.FC<HeaderProps> = ({
               <rect y="56" width="56" height="16" rx="2" />
             </svg>
             <span className="font-semibold text-lg tracking-tight flex items-center gap-1.5">
-              <span>ReStructure</span>
-              <span className="font-light text-ink-mute">AI</span>
+              <span>Sovereign</span>
+              <span className="font-light text-ink-mute">Sales</span>
               <span className="text-xs font-mono uppercase bg-neutral-200 dark:bg-neutral-800 text-ink dark:text-ink-light px-1.5 py-0.5 rounded tracking-wider ml-1">
-                Sales
+                OS
               </span>
             </span>
           </a>
 
           <div className="hidden md:flex items-center gap-2 text-xs font-mono text-ink-mute uppercase tracking-widest pl-4 border-l border-line dark:border-line-dark">
-            <span className="inline-flex items-center gap-1.5 text-reese-green font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-reese-green animate-pulse"></span>
+            <span className="inline-flex items-center gap-1.5 text-sovereign-green font-medium">
+              <span className="w-1.5 h-1.5 rounded-full bg-sovereign-green animate-pulse"></span>
               24/7 Pipeline Active
             </span>
             <span>&middot;</span>
@@ -56,7 +56,7 @@ export const Header: React.FC<HeaderProps> = ({
             The 7 Agents
           </a>
           <a href="#simulator" className="hover:text-ink dark:hover:text-white transition-colors flex items-center gap-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-ink dark:focus-visible:ring-white rounded px-1 py-0.5">
-            <Play className="w-3.5 h-3.5 text-reese-green fill-reese-green" />
+            <Play className="w-3.5 h-3.5 text-sovereign-green fill-sovereign-green" />
             Live Simulation
           </a>
           <a href="#interrupts" className="hover:text-ink dark:hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ink dark:focus-visible:ring-white rounded px-1 py-0.5">

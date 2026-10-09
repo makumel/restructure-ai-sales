@@ -1,6 +1,6 @@
-# ReStructure AI — 24/7 AI Sales Department
+# Sovereign Sales OS — 24/7 Autonomous Sales Department
 
-An on-premise, sovereign AI sales appliance coordinating seven specialized autonomous agents running 24/7. Replicated from the ReStructure AI architecture blueprint.
+An on-premise, sovereign AI sales appliance coordinating seven specialized autonomous agents running 24/7. Built on the sovereign multi-agent architecture blueprint.
 
 ## ⚡ The 7 Autonomous Agents Mapped
 1. **01 · CSO & Lead Router** — Deterministic + LLM hybrid orchestrator evaluating leads against `icp-matrix.md`.

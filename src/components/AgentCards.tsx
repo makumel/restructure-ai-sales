@@ -54,7 +54,7 @@ export const AgentCards: React.FC = () => {
                     key={agent.id}
                     className={`p-5 rounded-xl border transition-all ${
                       agent.isHuman
-                        ? 'border-reese-green bg-white dark:bg-neutral-900 shadow-sm'
+                        ? 'border-sovereign-green bg-white dark:bg-neutral-900 shadow-sm'
                         : 'border-line-soft dark:border-line-dark bg-white/70 dark:bg-neutral-900/70 hover:border-neutral-400 dark:hover:border-neutral-700'
                     }`}
                   >
@@ -64,7 +64,7 @@ export const AgentCards: React.FC = () => {
                       </span>
                       <span className={`text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded font-medium ${
                         agent.isHuman
-                          ? 'bg-reese-green-lt text-reese-green-dk dark:bg-green-950 dark:text-green-300'
+                          ? 'bg-sovereign-green-lt text-sovereign-green-dk dark:bg-green-950 dark:text-green-300'
                           : 'bg-neutral-100 dark:bg-neutral-800 text-ink-mute'
                       }`}>
                         {agent.controlType}

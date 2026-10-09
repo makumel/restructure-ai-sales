@@ -88,7 +88,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
 
         {status === 'success' ? (
           <div className="py-8 text-center animate-fadeIn">
-            <div className="w-12 h-12 rounded-full bg-reese-green-lt dark:bg-green-950/60 text-reese-green flex items-center justify-center mx-auto mb-4">
+            <div className="w-12 h-12 rounded-full bg-sovereign-green-lt dark:bg-green-950/60 text-sovereign-green flex items-center justify-center mx-auto mb-4">
               <CheckCircle2 className="w-6 h-6" />
             </div>
             <h3 className="text-xl font-semibold text-ink dark:text-white mb-2">
@@ -112,7 +112,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
         ) : (
           <div>
             <div className="mb-6">
-              <div className="flex items-center gap-2 text-xs font-mono text-reese-green font-semibold uppercase tracking-wider mb-1">
+              <div className="flex items-center gap-2 text-xs font-mono text-sovereign-green font-semibold uppercase tracking-wider mb-1">
                 <Lock className="w-3.5 h-3.5" />
                 Sovereign Hardware Allotment
               </div>
@@ -120,13 +120,13 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
                 Deploy Your AI Sales Department
               </h3>
               <p className="text-xs text-ink-soft dark:text-ink-light/80 mt-1">
-                Receive the Reese Mini Computer Server pre-configured with the 7-agent pipeline. Plugs directly into your local office network.
+                Receive the Sovereign Mini Computer Server pre-configured with the 7-agent pipeline. Plugs directly into your local office network.
               </p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               {status === 'error' && (
-                <div className="p-3 rounded-lg border border-red-300 dark:border-red-900 bg-red-50 dark:bg-red-950/40 text-xs flex items-center justify-between text-red-700 dark:text-red-300">
+                <div className="p-3 rounded-lg border border-red-300 dark:border-red-900 bg-red-50 dark:red-950/40 text-xs flex items-center justify-between text-red-700 dark:text-red-300">
                   <div className="flex items-center gap-2">
                     <AlertCircle className="w-4 h-4 flex-shrink-0" />
                     <span>Unable to submit reservation. Please verify your connection and try again.</span>
@@ -281,7 +281,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
                     <span>Provisioning Telemetry...</span>
                   ) : (
                     <>
-                      <ShieldCheck className="w-4 h-4 text-reese-green" />
+                      <ShieldCheck className="w-4 h-4 text-sovereign-green" />
                       Request Sovereign Server Allotment
                       <ArrowRight className="w-4 h-4" />
                     </>
@@ -290,7 +290,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
               </div>
 
               <div className="text-[11px] text-center text-ink-mute font-mono flex items-center justify-center gap-1.5 pt-1">
-                <ShieldCheck className="w-3.5 h-3.5 text-reese-green" />
+                <ShieldCheck className="w-3.5 h-3.5 text-sovereign-green" />
                 Protected by Sovereign Deception Honeypot & Zero Cloud Telemetry
               </div>
             </form>
