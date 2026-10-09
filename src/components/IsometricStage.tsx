@@ -108,11 +108,11 @@ export const IsometricStage: React.FC = () => {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-8 sm:mb-10 gap-6">
           <div>
             <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-ink-mute mb-2.5">
-              <span className="w-2 h-2 rounded-full bg-reese-green"></span>
+              <span className="w-2 h-2 rounded-full bg-sovereign-green"></span>
               SYSTEM ARCHITECTURE &middot; 7-LAYER STACK
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal tracking-[-0.03em] text-ink dark:text-white">
-              The Seven Layers of Reese Sales
+              The Seven Layers of Autonomous Sales
             </h2>
             <p className="text-sm sm:text-base text-ink-soft dark:text-ink-light/70 mt-2.5 max-w-2xl leading-relaxed">
               Software layout engineered for flawless execution on desktop and mobile. AI automates high-volume prospecting and qualification, while Layer 06 guarantees 100% human sign-off on closed contracts.
@@ -154,17 +154,17 @@ export const IsometricStage: React.FC = () => {
               onClick={() => setIsAutoTracing(!isAutoTracing)}
               className={`px-3 py-2 rounded-lg text-xs font-mono border flex items-center gap-2 transition-all ${
                 isAutoTracing
-                  ? 'bg-reese-green text-white border-reese-green shadow-sm'
+                  ? 'bg-sovereign-green text-white border-sovereign-green shadow-sm'
                   : 'bg-white dark:bg-neutral-900 border-line dark:border-line-dark text-ink-soft dark:text-ink-light hover:text-ink'
               }`}
               title={isAutoTracing ? 'Pause Auto-Trace' : 'Start Auto-Trace through layers'}
             >
-              {isAutoTracing ? (
+              {isAutoTracing ? (\
                 <>
                   <Pause className="w-3.5 h-3.5" />
                   <span className="font-semibold">Tracing Active</span>
                 </>
-              ) : (
+              ) : (\
                 <>
                   <Play className="w-3.5 h-3.5" />
                   <span>Auto-Trace Flow</span>
@@ -229,8 +229,8 @@ export const IsometricStage: React.FC = () => {
                     <span className="w-2 h-2 rounded-full bg-ink dark:bg-white"></span>
                     AI
                   </span>
-                  <span className="flex items-center gap-1.5 text-reese-green font-semibold">
-                    <span className="w-2 h-2 rounded-full bg-reese-green animate-pulse"></span>
+                  <span className="flex items-center gap-1.5 text-sovereign-green font-semibold">
+                    <span className="w-2 h-2 rounded-full bg-sovereign-green animate-pulse"></span>
                     Human Sign-Off
                   </span>
                 </div>
@@ -264,7 +264,7 @@ export const IsometricStage: React.FC = () => {
                       className={`relative z-10 w-full text-left p-3.5 sm:p-4 rounded-xl border transition-all cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-ink dark:focus-visible:ring-white ${
                         isSelected
                           ? isHuman
-                            ? 'bg-emerald-50/70 dark:bg-emerald-950/30 border-reese-green shadow-md ring-1 ring-reese-green'
+                            ? 'bg-emerald-50/70 dark:bg-emerald-950/30 border-sovereign-green shadow-md ring-1 ring-sovereign-green'
                             : 'bg-white dark:bg-neutral-900 border-ink dark:border-white shadow-md ring-1 ring-ink dark:ring-white'
                           : 'bg-white/90 dark:bg-neutral-900/80 border-line dark:border-line-dark hover:border-neutral-400 dark:hover:border-neutral-700 shadow-sm'
                       }`}
@@ -277,7 +277,7 @@ export const IsometricStage: React.FC = () => {
                           <div
                             className={`w-9 h-9 shrink-0 rounded-lg flex items-center justify-center font-mono text-xs font-bold transition-all ${
                               isHuman
-                                ? 'bg-reese-green text-white shadow-sm'
+                                ? 'bg-sovereign-green text-white shadow-sm'
                                 : isSelected
                                 ? 'bg-ink text-white dark:bg-white dark:text-ink'
                                 : 'bg-neutral-100 dark:bg-neutral-800 text-ink-mute'
@@ -293,8 +293,8 @@ export const IsometricStage: React.FC = () => {
                                 {agent.title}
                               </h3>
                               {isHuman && (
-                                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-mono font-bold uppercase tracking-wider bg-reese-green-lt text-reese-green-dk dark:bg-emerald-950 dark:text-emerald-300 border border-reese-green/30">
-                                  <ShieldCheck className="w-3 h-3 text-reese-green" />
+                                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-mono font-bold uppercase tracking-wider bg-sovereign-green-lt text-sovereign-green-dk dark:bg-emerald-950 dark:text-emerald-300 border border-sovereign-green/30">
+                                  <ShieldCheck className="w-3 h-3 text-sovereign-green" />
                                   YOU OWN IT
                                 </span>
                               )}
@@ -364,7 +364,7 @@ export const IsometricStage: React.FC = () => {
                     <span
                       className={`text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded font-bold ${
                         activeAgent.isHuman
-                          ? 'bg-reese-green-lt text-reese-green-dk dark:bg-emerald-950 dark:text-emerald-300'
+                          ? 'bg-sovereign-green-lt text-sovereign-green-dk dark:bg-emerald-950 dark:text-emerald-300'
                           : 'bg-neutral-100 dark:bg-neutral-800 text-ink-mute'
                       }`}
                     >
@@ -372,8 +372,8 @@ export const IsometricStage: React.FC = () => {
                     </span>
                   </div>
                   
-                  <div className="flex items-center gap-1.5 text-xs font-mono text-reese-green">
-                    <span className="w-2 h-2 rounded-full bg-reese-green animate-pulse"></span>
+                  <div className="flex items-center gap-1.5 text-xs font-mono text-sovereign-green">
+                    <span className="w-2 h-2 rounded-full bg-sovereign-green animate-pulse"></span>
                     <span>LIVE TELEMETRY</span>
                   </div>
                 </div>
@@ -382,7 +382,7 @@ export const IsometricStage: React.FC = () => {
                 <div className="mt-4">
                   <h3 className="text-xl font-semibold text-ink dark:text-white tracking-tight flex items-center gap-2">
                     {activeAgent.title}
-                    {activeAgent.isHuman && <ShieldCheck className="w-5 h-5 text-reese-green" />}
+                    {activeAgent.isHuman && <ShieldCheck className="w-5 h-5 text-sovereign-green" />}
                   </h3>
                   <p className="text-xs text-ink-mute font-mono mt-1">
                     {activeAgent.role}
@@ -445,7 +445,7 @@ export const IsometricStage: React.FC = () => {
                 {/* Tab 1: Specs */}
                 {activeTab === 'specs' && (
                   <div className="mt-4 space-y-2 text-xs">
-                    {activeAgent.specs.map(([label, val]) => (
+                    {activeAgent.specs.map(([label, val]) => (\
                       <div
                         key={label}
                         className="flex justify-between items-center py-1.5 px-2.5 rounded bg-neutral-50 dark:bg-neutral-800/50 border border-line-soft dark:border-line-dark"
@@ -466,12 +466,12 @@ export const IsometricStage: React.FC = () => {
                       Registered MCP Tools & APIs for this execution layer:
                     </div>
                     <div className="flex flex-wrap gap-1.5 pt-1">
-                      {activeAgent.tools.map((tool) => (
+                      {activeAgent.tools.map((tool) => (\
                         <span
                           key={tool}
                           className="text-xs font-mono px-2.5 py-1 rounded border border-line dark:border-line-dark bg-neutral-50 dark:bg-neutral-800 text-ink dark:text-ink-light flex items-center gap-1.5"
                         >
-                          <CheckCircle2 className="w-3 h-3 text-reese-green" />
+                          <CheckCircle2 className="w-3 h-3 text-sovereign-green" />
                           {tool}
                         </span>
                       ))}
@@ -486,7 +486,7 @@ export const IsometricStage: React.FC = () => {
                       Sovereign on-disk Markdown files stored on NVMe:
                     </div>
                     <div className="space-y-1.5 pt-1">
-                      {activeAgent.files.map((file) => (
+                      {activeAgent.files.map((file) => (\
                         <div
                           key={file}
                           className="flex items-center justify-between text-xs font-mono p-2 rounded bg-neutral-50 dark:bg-neutral-800 border border-line-soft dark:border-line-dark"
@@ -511,7 +511,7 @@ export const IsometricStage: React.FC = () => {
                         onClick={handleCopyPrompt}
                         className="flex items-center gap-1 text-ink dark:text-white hover:underline"
                       >
-                        {copiedPrompt ? <Check className="w-3 h-3 text-reese-green" /> : <Copy className="w-3 h-3" />}
+                        {copiedPrompt ? <Check className="w-3 h-3 text-sovereign-green" /> : <Copy className="w-3 h-3" />}
                         <span>{copiedPrompt ? 'Copied' : 'Copy'}</span>
                       </button>
                     </div>
@@ -564,8 +564,8 @@ export const IsometricStage: React.FC = () => {
                   <span className="w-2 h-2 rounded-full bg-ink dark:bg-white"></span>
                   AI-Executed
                 </span>
-                <span className="flex items-center gap-1.5 text-reese-green font-medium">
-                  <span className="w-2 h-2 rounded-full bg-reese-green"></span>
+                <span className="flex items-center gap-1.5 text-sovereign-green font-medium">
+                  <span className="w-2 h-2 rounded-full bg-sovereign-green"></span>
                   You Own It
                 </span>
               </div>
@@ -744,7 +744,7 @@ export const IsometricStage: React.FC = () => {
                     <span className="font-mono text-xs font-bold px-2 py-0.5 rounded bg-neutral-100 dark:bg-neutral-800 text-ink dark:text-ink-light">
                       LAYER {activeAgent.number}
                     </span>
-                    <span className="text-[10px] font-mono text-reese-green font-semibold">
+                    <span className="text-[10px] font-mono text-sovereign-green font-semibold">
                       INSPECTION
                     </span>
                   </div>
@@ -787,7 +787,7 @@ export const IsometricStage: React.FC = () => {
                 className={`h-2.5 flex-1 rounded-sm transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-ink active:scale-95 ${
                   activeAgent.id === agent.id
                     ? agent.isHuman
-                      ? 'bg-reese-green'
+                      ? 'bg-sovereign-green'
                       : 'bg-ink dark:bg-white'
                     : 'bg-neutral-200 dark:bg-neutral-800 hover:bg-neutral-300'
                 }`}
@@ -801,7 +801,7 @@ export const IsometricStage: React.FC = () => {
           <div className="text-xs font-mono text-ink-mute flex items-center gap-2">
             <span>ACTIVE LAYER: <strong className="text-ink dark:text-white">{activeAgent.number} &middot; {activeAgent.title}</strong></span>
             <span>&middot;</span>
-            <span className="text-reese-green font-medium">99.4% VERIFIED PIPELINE</span>
+            <span className="text-sovereign-green font-medium">99.4% VERIFIED PIPELINE</span>
           </div>
         </div>
 
