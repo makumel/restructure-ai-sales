@@ -9,13 +9,13 @@ function getStepCardClass(
   isAgentPassed: boolean
 ): string {
   if (isAwaitingHuman) {
-    return 'border-reese-amber bg-amber-50 dark:bg-amber-950/40 ring-2 ring-reese-amber/50 animate-pulse';
+    return 'border-sovereign-amber bg-amber-50 dark:bg-amber-950/40 ring-2 ring-sovereign-amber/50 animate-pulse';
   }
   if (isAgentActive) {
     return 'border-ink bg-white dark:border-white dark:bg-neutral-800 shadow-sm';
   }
   if (isAgentPassed) {
-    return 'border-reese-green/40 bg-reese-green-lt/30 dark:bg-green-950/20';
+    return 'border-sovereign-green/40 bg-sovereign-green-lt/30 dark:bg-green-950/20';
   }
   return 'border-line-soft dark:border-line-dark bg-white/40 dark:bg-neutral-900/40 opacity-70';
 }
@@ -26,10 +26,10 @@ function renderStepStatusIcon(
   isAgentPassed: boolean
 ) {
   if (isAgentPassed) {
-    return <CheckCircle className="w-3.5 h-3.5 text-reese-green" />;
+    return <CheckCircle className="w-3.5 h-3.5 text-sovereign-green" />;
   }
   if (isAwaitingHuman) {
-    return <AlertTriangle className="w-3.5 h-3.5 text-reese-amber animate-bounce" />;
+    return <AlertTriangle className="w-3.5 h-3.5 text-sovereign-amber animate-bounce" />;
   }
   if (isAgentActive) {
     return <span className="w-2 h-2 rounded-full bg-ink dark:bg-white animate-ping" />;
@@ -249,7 +249,7 @@ export const PipelineSimulator: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-10">
           <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded border border-line dark:border-line-dark bg-neutral-100 dark:bg-neutral-800 text-xs font-mono uppercase tracking-wider text-ink dark:text-ink-light mb-3">
-            <Terminal className="w-3.5 h-3.5 text-reese-green" />
+            <Terminal className="w-3.5 h-3.5 text-sovereign-green" />
             Interactive Hardware Cockpit
           </div>
           <h2 className="text-3xl sm:text-5xl font-normal tracking-[-0.03em] text-ink dark:text-white">
@@ -294,7 +294,7 @@ export const PipelineSimulator: React.FC = () => {
               {!isRunning && currentStep === 0 ? (
                 <button
                   onClick={handleStart}
-                  className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded bg-reese-green text-white font-mono text-xs uppercase tracking-wider font-semibold hover:bg-reese-green-dk active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-reese-green focus-visible:ring-offset-2 transition-all shadow-sm"
+                  className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded bg-sovereign-green text-white font-mono text-xs uppercase tracking-wider font-semibold hover:bg-sovereign-green-dk active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-sovereign-green focus-visible:ring-offset-2 transition-all shadow-sm"
                 >
                   <Play className="w-3.5 h-3.5 fill-white" />
                   Trigger 7-Agent Loop
@@ -317,7 +317,7 @@ export const PipelineSimulator: React.FC = () => {
               <span className="hidden sm:inline">&middot;</span>
               <span className="hidden sm:inline">ORG: <strong className="text-ink dark:text-white">{selectedScenario.company}</strong></span>
               <span>&middot;</span>
-              <span>DEAL: <strong className="text-reese-green">{selectedScenario.dealSize}</strong></span>
+              <span>DEAL: <strong className="text-sovereign-green">{selectedScenario.dealSize}</strong></span>
             </div>
             <div className="flex items-center gap-2">
               <span className="px-2 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300">
@@ -362,10 +362,10 @@ export const PipelineSimulator: React.FC = () => {
             </div>
 
             {awaitingApproval && !dealApproved && (
-              <div className="mb-8 p-6 rounded-xl border-2 border-reese-amber bg-amber-50/80 dark:bg-amber-950/30 backdrop-blur-sm shadow-card animate-fadeIn">
+              <div className="mb-8 p-6 rounded-xl border-2 border-sovereign-amber bg-amber-50/80 dark:bg-amber-950/30 backdrop-blur-sm shadow-card animate-fadeIn">
                 <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-reese-amber text-white rounded-lg shadow-sm">
+                    <div className="p-3 bg-sovereign-amber text-white rounded-lg shadow-sm">
                       <UserCheck className="w-6 h-6" />
                     </div>
                     <div>
@@ -389,7 +389,7 @@ export const PipelineSimulator: React.FC = () => {
                   <div className="flex items-center gap-3 w-full md:w-auto">
                     <button
                       onClick={handleApproveDeal}
-                      className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 px-5 py-3 rounded bg-reese-green text-white font-mono text-xs uppercase tracking-wider font-semibold hover:bg-reese-green-dk active:scale-[0.98] transition-all shadow-md"
+                      className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 px-5 py-3 rounded bg-sovereign-green text-white font-mono text-xs uppercase tracking-wider font-semibold hover:bg-sovereign-green-dk active:scale-[0.98] transition-all shadow-md"
                     >
                       <ShieldCheck className="w-4 h-4" />
                       Approve Proposal ({selectedScenario.dealSize})
@@ -430,9 +430,9 @@ export const PipelineSimulator: React.FC = () => {
             )}
 
             {dealWon && (
-              <div className="mb-8 p-6 rounded-xl border border-reese-green bg-emerald-50/70 dark:bg-emerald-950/30 flex items-center justify-between gap-4">
+              <div className="mb-8 p-6 rounded-xl border border-sovereign-green bg-emerald-50/70 dark:bg-emerald-950/30 flex items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 bg-reese-green text-white rounded-lg">
+                  <div className="p-2.5 bg-sovereign-green text-white rounded-lg">
                     <Sparkles className="w-5 h-5" />
                   </div>
                   <div>
@@ -446,7 +446,7 @@ export const PipelineSimulator: React.FC = () => {
                 </div>
                 <button
                   onClick={handleStart}
-                  className="text-xs font-mono uppercase tracking-wider font-semibold px-3 py-1.5 rounded border border-reese-green text-reese-green-dk dark:text-reese-green hover:bg-reese-green hover:text-white transition-all"
+                  className="text-xs font-mono uppercase tracking-wider font-semibold px-3 py-1.5 rounded border border-sovereign-green text-sovereign-green-dk dark:text-sovereign-green hover:bg-sovereign-green hover:text-white transition-all"
                 >
                   Run Another Lead &rarr;
                 </button>
@@ -473,7 +473,7 @@ export const PipelineSimulator: React.FC = () => {
                   events.map((evt, idx) => (
                     <div key={idx} className="flex items-start gap-3 text-[11px] leading-relaxed animate-fadeIn">
                       <span className="text-neutral-500 select-none">[{evt.timestamp}]</span>
-                      <span className="text-reese-green font-semibold select-none">{evt.agentName}:</span>
+                      <span className="text-sovereign-green font-semibold select-none">{evt.agentName}:</span>
                       <span className="text-neutral-200 flex-1">{evt.details}</span>
                       {evt.badge && (
                         <span className="text-[10px] bg-neutral-800 text-neutral-300 px-1.5 py-0.5 rounded select-none">
