@@ -397,7 +397,7 @@ export const IsometricStage: React.FC = () => {
                 {/* Tab Navigation */}
                 <div className="mt-5 border-b border-line-soft dark:border-line-dark flex gap-1 text-xs font-mono">
                   <button
-                    onClick={() => setActiveTab('specs')}\
+                    onClick={() => setActiveTab('specs')}
                     className={`pb-2 px-2.5 transition-colors border-b-2 -mb-px flex items-center gap-1.5 ${
                       activeTab === 'specs'
                         ? 'border-ink text-ink dark:border-white dark:text-white font-medium'
