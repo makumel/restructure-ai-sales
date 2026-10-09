@@ -8,11 +8,13 @@ import { AgentCards } from './components/AgentCards';
 import { Interrupts } from './components/Interrupts';
 import { Scoreboard } from './components/Scoreboard';
 import { ContactModal } from './components/ContactModal';
+import { VideoDemoModal } from './components/VideoDemoModal';
 import { Footer } from './components/Footer';
 
 export const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState<boolean>(false);
   const [isContactOpen, setIsContactOpen] = useState<boolean>(false);
+  const [isVideoDemoOpen, setIsVideoDemoOpen] = useState<boolean>(false);
 
   useEffect(() => {
     if (darkMode) {
@@ -39,6 +41,7 @@ export const App: React.FC = () => {
         setDarkMode={setDarkMode}
         onOpenContact={() => setIsContactOpen(true)}
         onScrollToSimulator={scrollToSimulator}
+        onOpenVideoDemo={() => setIsVideoDemoOpen(true)}
       />
       <ErrorBoundary>
         <main className="flex-1">
@@ -46,6 +49,7 @@ export const App: React.FC = () => {
             onScrollToAnatomy={scrollToAnatomy}
             onScrollToSimulator={scrollToSimulator}
             onOpenContact={() => setIsContactOpen(true)}
+            onOpenVideoDemo={() => setIsVideoDemoOpen(true)}
           />
           <IsometricStage />
           <PipelineSimulator />
@@ -58,6 +62,10 @@ export const App: React.FC = () => {
       <ContactModal
         isOpen={isContactOpen}
         onClose={() => setIsContactOpen(false)}
+      />
+      <VideoDemoModal
+        isOpen={isVideoDemoOpen}
+        onClose={() => setIsVideoDemoOpen(false)}
       />
     </div>
   );

@@ -1,11 +1,12 @@
 import React from 'react';
-import { ShieldCheck, Moon, Sun, Terminal, Play } from 'lucide-react';
+import { ShieldCheck, Moon, Sun, Terminal, Play, Video } from 'lucide-react';
 
 interface HeaderProps {
   darkMode: boolean;
   setDarkMode: (val: boolean) => void;
   onOpenContact: () => void;
   onScrollToSimulator: () => void;
+  onOpenVideoDemo?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -13,6 +14,7 @@ export const Header: React.FC<HeaderProps> = ({
   setDarkMode,
   onOpenContact,
   onScrollToSimulator,
+  onOpenVideoDemo,
 }) => {
   return (
     <header className="sticky top-0 z-50 bg-canvas/90 dark:bg-canvas-dark/90 backdrop-blur-md border-b border-line dark:border-line-dark transition-colors">
@@ -77,9 +79,19 @@ export const Header: React.FC<HeaderProps> = ({
             {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
 
+          {onOpenVideoDemo && (
+            <button
+              onClick={onOpenVideoDemo}
+              className="hidden sm:inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-2 rounded border border-sovereign-green/40 bg-emerald-50 dark:bg-emerald-950/40 text-sovereign-green-dk dark:text-emerald-300 hover:border-sovereign-green transition-all active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-ink dark:focus-visible:ring-white"
+            >
+              <Video className="w-3.5 h-3.5 text-sovereign-green" />
+              Video Demo
+            </button>
+          )}
+
           <button
             onClick={onScrollToSimulator}
-            className="hidden sm:inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-2 rounded border border-line dark:border-line-dark bg-white dark:bg-neutral-900 text-ink dark:text-ink-light hover:border-neutral-400 dark:hover:border-neutral-700 transition-all active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-ink dark:focus-visible:ring-white"
+            className="hidden lg:inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-2 rounded border border-line dark:border-line-dark bg-white dark:bg-neutral-900 text-ink dark:text-ink-light hover:border-neutral-400 dark:hover:border-neutral-700 transition-all active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-ink dark:focus-visible:ring-white"
           >
             <Terminal className="w-3.5 h-3.5 text-ink-mute" />
             Run Test Loop

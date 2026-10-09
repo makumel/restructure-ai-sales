@@ -1,16 +1,18 @@
 import React from 'react';
-import { ArrowDown, Cpu, Shield, Zap, Sparkles } from 'lucide-react';
+import { ArrowDown, Cpu, Shield, Zap, Sparkles, Video } from 'lucide-react';
 
 interface HeroProps {
   onScrollToAnatomy: () => void;
   onScrollToSimulator: () => void;
   onOpenContact: () => void;
+  onOpenVideoDemo?: () => void;
 }
 
 export const Hero: React.FC<HeroProps> = ({
   onScrollToAnatomy,
   onScrollToSimulator,
-  onOpenContact
+  onOpenContact,
+  onOpenVideoDemo
 }) => {
   return (
     <section className="relative pt-12 pb-16 md:pt-20 md:pb-24 border-b border-line dark:border-line-dark overflow-hidden">
@@ -59,6 +61,16 @@ export const Hero: React.FC<HeroProps> = ({
             <Zap className="w-4 h-4 text-sovereign-green" />
             Launch Live Pipeline Simulator
           </button>
+
+          {onOpenVideoDemo && (
+            <button
+              onClick={onOpenVideoDemo}
+              className="inline-flex items-center gap-2 px-5 py-3 rounded text-sm font-medium border border-sovereign-green/40 bg-emerald-50 dark:bg-emerald-950/40 text-sovereign-green-dk dark:text-emerald-300 hover:border-sovereign-green active:scale-[0.98] transition-all"
+            >
+              <Video className="w-4 h-4 text-sovereign-green" />
+              Watch Video Demo
+            </button>
+          )}
 
           <button
             onClick={onOpenContact}
